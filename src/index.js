@@ -1,6 +1,7 @@
 const { Client, Intents, Collection } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 const fs = require('fs');
+const keepAlive = require('./server')
 
 client.commands = new Collection();
 client.buttons = new Collection();
@@ -17,5 +18,6 @@ const commmandFolders = fs.readdirSync("./src/commands");
     client.handleEvents(eventFiles, "./src/events")
     client.handleCommands(commmandFolders, "./src/commands")
     client.handleButtons();
-    client.login(process.env.TOKEN)
+    client.login(process.env.TOKEN);
+    keepAlive();
 })();

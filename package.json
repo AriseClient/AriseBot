@@ -16,6 +16,11 @@
     "discord-api-types": "^0.31.1",
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
-    "nodemon": "^2.0.15"
+    "express": "^4.17.3",
+    "fs": "0.0.1-security",
+    "install": "^0.13.0",
+    "nodemon": "^2.0.15",
+    "npm": "^8.7.0",
+    "node": "^16.10.0"
   }
 }
