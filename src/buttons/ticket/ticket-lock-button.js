@@ -27,6 +27,11 @@ module.exports = {
                 embeds: [supportLockedEmbed],
                 components: [supportLockedRow]
             })
+                var ticketLogEmbed = new MessageEmbed()
+            .setColor('YELLOW')
+            .setTitle('Locked Ticket')
+            .setDescription(`Ticket #${interaction.channel.name} has been locked by <@${interaction.user.id}>.`)
+      interaction.guild.channels.cache.get("967605555868872774").send({embeds: [ticketLogEmbed]})
         }
     }
 }

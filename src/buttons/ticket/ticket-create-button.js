@@ -41,5 +41,10 @@ module.exports = {
             embeds: [supportWelcomeEmbed],
             components: [supportWelcomeRow]
         })
+                var ticketLogEmbed = new MessageEmbed()
+            .setColor('GREEN')
+            .setTitle('New Ticket')
+            .setDescription(`A new ticket has been created by <@${interaction.user.id}>`)
+      interaction.guild.channels.cache.get("967605555868872774").send({embeds: [ticketLogEmbed]})
     }
 }
